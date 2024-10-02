@@ -26,7 +26,4 @@ $.ready(() => {
     marker.setLngLat(location);
     marker.setPopup(new maplibregl.Popup().setHTML(sb.join('')));
     marker.addTo(map);
-
 })
-
-// https://maplibre.org/maplibre-gl-js/docs/API/classes/Marker/
