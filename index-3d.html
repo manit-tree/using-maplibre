@@ -25,10 +25,12 @@
         */
 
         const map = new maplibregl.Map({
-            style: 'https://tiles.openfreemap.org/styles/bright',
+            style: 'https://tiles.openfreemap.org/styles/liberty',
             center: location,
-            zoom: 16.5,
+            zoom: 14.2,
             container: 'map',
+            pitch: 60,
+            bearing: 55.2
         })  
 
         const nav = new maplibregl.NavigationControl({ showCompass: false })
