@@ -14,13 +14,18 @@ Mini project for learning how to use MaplibRe
 
 ## Usage
 
-![image](https://github.com/user-attachments/assets/b3ab2ed1-c4c5-4ae2-b53e-a87192163f5f)
+![image](https://github.com/user-attachments/assets/ccf0e379-03a4-48d9-acab-d63ce1197158)
+
 
 Display map
 
-![image](https://github.com/user-attachments/assets/ad1a6d9c-36ee-4fdb-885e-2321f53d4683)
+![image](https://github.com/user-attachments/assets/66910ac3-1da4-4ddb-9f84-76428bf75282)
 
 Display map in 3D use liberty style
+
+![image](https://github.com/user-attachments/assets/ad80f48f-cd19-4c89-b854-e670683faabd)
+
+Using map tiles from maptiler.com
 
 ## API documentation
 
