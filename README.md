@@ -17,3 +17,7 @@ Mini project for learning how to use MaplibRe
 ## API documentation
 
 [https://maplibre.org/maplibre-gl-js/docs](https://maplibre.org/maplibre-gl-js/docs)
+
+## Styles
+
+[https://github.com/hyperknot/openfreemap-styles/](https://github.com/hyperknot/openfreemap-styles/)

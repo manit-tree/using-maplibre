@@ -1,8 +1,16 @@
 $.ready(() => {
     const location = [100.54761485951755, 13.83402735130762];
 
+    // map styles
+
+    /*
+    - https://tiles.openfreemap.org/styles/bright
+    - https://tiles.openfreemap.org/styles/liberty
+    - https://tiles.openfreemap.org/styles/positron
+    */
+
     const map = new maplibregl.Map({
-        style: 'https://tiles.openfreemap.org/styles/liberty',
+        style: 'https://tiles.openfreemap.org/styles/bright',
         center: location,
         zoom: 16.5,
         container: 'map',
@@ -10,7 +18,7 @@ $.ready(() => {
 
     const nav = new maplibregl.NavigationControl({ showCompass: false })
     map.addControl(nav, 'top-right');
-    
+
     let marker = new maplibregl.Marker({
         color: 'red'
     })
