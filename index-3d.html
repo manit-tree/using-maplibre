@@ -33,24 +33,26 @@
             bearing: 55.2
         })  
 
-        const nav = new maplibregl.NavigationControl({ showCompass: false })
-        map.addControl(nav, 'top-right');
+        map.on('load', () => {
+          const nav = new maplibregl.NavigationControl({ showCompass: false })
+          map.addControl(nav, 'top-right');
 
-        let marker = new maplibregl.Marker({
-            color: 'red'
+          let marker = new maplibregl.Marker({
+              color: 'red'
+          })
+          
+          let sb = new Array();
+
+          sb.push('<div class="info">');
+          sb.push('<h4 class="title">New York Marriott Marquis</h4>');
+          sb.push('<p class="address">1535 Broadway, New York, NY 10036, United States/p>');
+          sb.push('<p>Tel. <a href="tel:080-555-6667">080-555-6667</a></p>');
+          sb.push('</div>');
+
+          marker.setLngLat(location);
+          marker.setPopup(new maplibregl.Popup().setHTML(sb.join('')));
+          marker.addTo(map);          
         })
-        
-        let sb = new Array();
-
-        sb.push('<div class="info">');
-        sb.push('<h4 class="title">New York Marriott Marquis</h4>');
-        sb.push('<p class="address">1535 Broadway, New York, NY 10036, United States/p>');
-        sb.push('<p>Tel. <a href="tel:080-555-6667">080-555-6667</a></p>');
-        sb.push('</div>');
-
-        marker.setLngLat(location);
-        marker.setPopup(new maplibregl.Popup().setHTML(sb.join('')));
-        marker.addTo(map);
     })      
     </script>
   </body>
