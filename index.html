@@ -10,7 +10,7 @@
     <div id="map">
     </div>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./dist/maplibregl/index.js"></script>
+    <script src="./dist/maplibregl/index.iife.min.js"></script>
     <script src="./js/teriyaki/index.js"></script>
     <script>
     $.ready(() => {
@@ -47,9 +47,17 @@
           sb.push('<p>Tel. <a href="tel:080-555-6667">080-555-6667</a></p>');
           sb.push('</div>');
 
+          let popup = new maplibregl.Popup().setHTML(sb.join(''));
+
+          // popup.setLngLat(location);
+
+          popup.addTo(map);
+          console.log(popup);
+
           marker.setLngLat(location);
-          marker.setPopup(new maplibregl.Popup().setHTML(sb.join('')));
-          marker.addTo(map);          
+          marker.setPopup(popup);
+          marker.addTo(map);  
+          marker.togglePopup();        
         })
     })      
     </script>

@@ -8,15 +8,15 @@ export default defineConfig({
     },
     build: {
         outDir: './dist/maplibregl',
-        minify: false,
-        sourcemap: false,
+        minify: true,
+        sourcemap: true,
         emptyOutDir: true,   
 
         lib: {
             entry: './modules/maplibregl/index.js',
             name:'maplibregl',
-            formats: ['iife'],
-            fileName: (format) => `[name].js`
+            formats: ['iife','esm'],
+            fileName: (format) => `[name].[format].min.js`
         }
     }
 })
